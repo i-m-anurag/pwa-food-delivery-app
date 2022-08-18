@@ -1,0 +1,13 @@
+<h4>RECIPE INFORMATION</h4>
+
+   <mat-card *ngIf="recipeItemInfo">
+        <img mat-card-image [src]="recipeItemInfo.image">
+        <mat-card-title>{{recipeItemInfo.name | uppercase}}</mat-card-title>
+        <mat-card-subtitle>Created By: {{recipeItemInfo.created_by}}</mat-card-subtitle>
+        <mat-card-content>Description: {{recipeItemInfo.description}}</mat-card-content>
+            <mat-card-content>User Location:Latitute {{lat}} and Longitude: {{lng}}</mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="getLocation()">Get My Location</button>
+            <button mat-raised-button color="primary" [disabled]="!lat" (click)="save()">Confirm Order</button>
+        </mat-card-actions>
+    </mat-card>

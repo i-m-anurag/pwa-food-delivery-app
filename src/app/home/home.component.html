@@ -1,0 +1,14 @@
+
+<h4 class="text-center" >ORDER SOME DELICIOUS FOOD !!</h4>
+<div class="row">
+    <div class="col-sm-4" *ngFor="let data of FoodItem">
+<mat-card>
+        <img mat-card-image [src]="data.image">
+    <mat-card-title>{{data.name | uppercase}}</mat-card-title>
+    <mat-card-subtitle>Created By: {{data.created_by}}</mat-card-subtitle>
+
+    <mat-card-footer></mat-card-footer>
+    <mat-card-actions><button mat-raised-button color="primary" (click)="placeOrder(data.id)">Place Order</button></mat-card-actions>
+</mat-card>
+    </div>
+</div>
