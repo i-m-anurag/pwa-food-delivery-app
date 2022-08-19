@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  FIREBASE_API:'https://food-delivery-app-c7b21-default-rtdb.firebaseio.com'
+  FIREBASE_API: 'https://food-delivery-app-c7b21-default-rtdb.firebaseio.com',
+  version: '1.0.1'
 };
 
 /*
